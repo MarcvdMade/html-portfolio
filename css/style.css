@@ -1,3 +1,52 @@
+/* color codes
+#ebe0e0 less white
+*/
+
 html {
-    
+    padding: 0;
+    margin: 0;
+    background-color: #ebe0e0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;  
+}
+
+h1 {
+    color: white;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-top: 5px solid #ebe0e0;
+    font-size: 4vw;
+}
+
+h1::before {
+    content: 'Creative Programmer💻';
+    position: absolute;
+    bottom: -60px;
+    font-size: 2.5vw;
+    text-align: center;
+    width: 100%;
+}
+
+#me {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #ebe0e0;
+    border-radius: 50%;
+    width: 20%;
+    height: 40%;
+}
+
+#canvas1 {
+    width: 100%;
+    background-color: black;
+    top: 0;
+    z-index: -1;
 }
