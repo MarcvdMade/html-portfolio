@@ -16,13 +16,13 @@ let particleAmount = 200;
 const gradient = ctx.createLinearGradient(0, 0, c.width, 0);
 gradient.addColorStop('0.1', 'red');
 gradient.addColorStop('0.2', 'blue');
-gradient.addColorStop('0.3', 'yellow');
-gradient.addColorStop('0.4', 'pink');
-gradient.addColorStop('0.5', 'purple');
+gradient.addColorStop('0.3', 'green');
+gradient.addColorStop('0.4', 'purple');
+gradient.addColorStop('0.5', 'pink');
 gradient.addColorStop('0.6', 'lime');
-gradient.addColorStop('0.7', 'green');
+gradient.addColorStop('0.7', 'yellow');
 gradient.addColorStop('0.8', 'orange');
-gradient.addColorStop('0.9', 'lightsalmon');
+gradient.addColorStop('0.9', '#f44013');
 
 // title element
 let titleElement = document.getElementById("title");
@@ -62,7 +62,7 @@ class Particle {
             this.y < title.y + title.height &&
             this.y + this.size > title.y
         ) {
-            this.y - + 3;
+            this.y  -= 3;
             this.weight *= -1.1;
         }
     }
@@ -85,7 +85,8 @@ function animate() {
         particlesArray[i].draw();
     }
 
-    ctx.fillRect(title.x, title.y, title.width, title.height);
+    // ctx.fillRect(title.x, title.y, title.width, title.height);
+    ctx.fillRect(0, c.height - 5, c.width, c.height);
 
     requestAnimationFrame(animate);
 }
@@ -103,15 +104,14 @@ function init() {
     console.log("init complete");
 }
 
-window.addEventListener('resize', function () {
-    c.width = window.innerWidth;
-    c.height = window.innerHeight;
-    titleMeasurements = titleElement.getBoundingClientRect();
-    title = {
-        x: titleMeasurements.left,
-        y: titleMeasurements.top,
-        width: titleMeasurements.width,
-        height: 10
-    }
-
-});
+// window.addEventListener('resize', function () {
+//     c.width = window.innerWidth;
+//     c.height = window.innerHeight;
+//     titleMeasurements = titleElement.getBoundingClientRect();
+//     title = {
+//         x: titleMeasurements.left,
+//         y: titleMeasurements.top,
+//         width: titleMeasurements.width,
+//         height: 10
+//     }
+// });

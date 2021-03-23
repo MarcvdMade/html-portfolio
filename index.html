@@ -11,27 +11,65 @@
 <body>
     <header>
         <div>
-            <img id="me" src="./img/me.jpeg">
+            <div id="me"></div>
             <h1 id="title">Marc van der Made</h1>
-            <div id="menu"></div>
+            <div id="menu">
+                <ul>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#hobbys">Hobby's</a>
+                    </li>
+                    <li>
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#programming">Programming skills</a>
+                    </li>
+                    <li>
+                        <a href="#skills">Other skills</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>   
+            </div>
             <canvas id="canvas1"></canvas>
         </div>
     </header>
 
     <main>
         <div id="about">
-
+            <div id="meWrapper">
+                <div id="meImg"></div>
+                <div id="aboutText">
+                    <h2>About me!</h2>
+                    <p>
+                        Hello! I'm Marc, a creative programmer from the Netherlands. I'm interested in different types of programming and open to
+                        try new things. I like learning different programming skills from web development to game development to machine learning.
+                    </p>
+                </div>
+            </div>
+            <div id="hobbyWrapper">
+                <h2>Hobby's</h2>
+                <div id="hobbys"></div>
+            </div>
         </div>
         <div id="projects">
+            <h2>Projects</h2>
 
         </div>
         <div id="programming">
+            <h2>Programming skills</h2>
 
         </div>
         <div id="skills">
+            <h2>Other skills</h2>
 
         </div>
         <div id="contact">
+            <h2>Contact</h2>
 
         </div>
     </main>
@@ -42,5 +80,9 @@
         </div>
     </footer>
     <script src="./js/particles.js"></script>
+    <script src="./js/hobbys.js"></script>
+    <script src="./js/projects.js"></script>
+    <script src="./js/programming.js"></script>
+    <script src="./js/skills.js"></script>
 </body>
 </html>
